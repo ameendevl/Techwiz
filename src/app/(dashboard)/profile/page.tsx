@@ -185,7 +185,7 @@ export default async function ProfilePage() {
             <EditProfileModal user={{
               id: user.id,
               name: user.name,
-              username: user.username,
+              username: user.username ?? "",
               email: user.email,
               bio: user.profile?.bio ?? "",
               phone: user.profile?.phone ?? "",

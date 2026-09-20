@@ -22,7 +22,7 @@ interface User {
   id: string;
   name: string;
   email: string;
-  username: string;
+  username: string | null;
   role: string;
   status: string;
   image?: string | null;

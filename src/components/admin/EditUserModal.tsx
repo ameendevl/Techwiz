@@ -14,7 +14,7 @@ interface EditUserModalProps {
     id: string;
     name: string;
     email: string;
-    username: string;
+    username: string | null;
     role: string;
     status: string;
   };
@@ -43,7 +43,7 @@ export function EditUserModal({ user, open, onClose, onSave, isSuperAdmin }: Edi
     resolver: zodResolver(editUserSchema),
     defaultValues: {
       name: user.name,
-      username: user.username,
+      username: user.username || "",
       email: user.email,
       role: user.role as EditUserInput["role"],
       status: user.status as EditUserInput["status"],
