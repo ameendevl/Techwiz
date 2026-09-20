@@ -38,7 +38,7 @@ const customAdapter: any = {
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: customAdapter,
   session: { strategy: "jwt" },
-  secret: process.env.AUTH_SECRET,
+  secret: process.env.AUTH_SECRET || "vertex-super-secure-production-auth-secret-key-32chars!",
 
   pages: {
     signIn: "/login",
